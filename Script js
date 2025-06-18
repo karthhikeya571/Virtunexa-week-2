@@ -1,0 +1,11 @@
+var map = L.map('map').setView([20.5937, 78.9629], 5);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: 'Map data © OpenStreetMap contributors'
+}).addTo(map);
+L.marker([28.6139, 77.2090]).addTo(map).bindPopup("New Delhi");
+L.marker([19.0760, 72.8777]).addTo(map).bindPopup("Mumbai");
+map.on('click', function(e) {
+  var lat = e.latlng.lat.toFixed(4);
+  var lng = e.latlng.lng.toFixed(4);
+  L.marker([lat, lng]).addTo(map).bindPopup("You clicked here: " + lat + ", " + lng).openPopup();
+});
