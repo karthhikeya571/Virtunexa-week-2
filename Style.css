@@ -1,0 +1,35 @@
+body {
+  font-family: Arial;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background: #2196f3;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav li a {
+  color: white;
+  text-decoration: none;
+}
+
+section {
+  padding: 1rem;
+}
+
+#map {
+  height: 400px;
+  width: 100%;
+  margin-top: 1rem;
+}
